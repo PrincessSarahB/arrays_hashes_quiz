@@ -105,13 +105,20 @@ users["Erik"][:home_town]
 # 3. Get the array of Erik's lottery numbers
 users["Erik"][:lottery_numbers]
 # 4. Get the type of Avril's pet Monty
-users["Avril"]
+users["Avril"][:pets][0][:species]
 # 5. Get the smallest of Erik's lottery numbers
+users["Erik"][:lottery_numbers].min
+
 # 6. Return an array of Avril's lottery numbers that are even
-users["Avril"]
+def even_numbers(num)
+users["Avril"][:lottery_numbers]
+end
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+users["Erik"][:lottery_numbers] << 7
 # 8. Change Erik's hometown to Edinburgh
+users["Erik"][:home_town] = "Edinburgh"
 # 9. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets]
 # 10. Add another person to the users hash
 
 
