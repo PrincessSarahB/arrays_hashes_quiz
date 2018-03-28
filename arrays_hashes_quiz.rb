@@ -14,18 +14,26 @@ stops.push("Edinburgh Waverley")
 stops.unshift("Glasgow Queen St")
 
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
-stops.insert(4, "Polmont")
-# 4. Work out the index position of `"Linlithgow"`
+stops[4] = "Polmont"
 
+# 4. Work out the index position of `"Linlithgow"`
+stops.index("Linlithgow")
 # 5. Remove `"Livingston"` from the array using its name
 stops.delete("Livingston")
 # 6. Delete `"Cumbernauld"` from the array by index
 stops.delete_at(2)
-p stops
 # 7. How many stops there are in the array?
+answer = stops.count
+
 # 8. How many ways can we return `"Falkirk High"` from the array?
+
 # 9. Reverse the positions of the stops in the array
+stops.reverse
+
 # 10. Print out all the stops using a for loop
+for name_of_stops in stops
+
+end
 
 ## Exercise B
 
