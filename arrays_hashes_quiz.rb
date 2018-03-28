@@ -18,7 +18,6 @@ stops[4] = "Polmont"
 
 # 4. Work out the index position of `"Linlithgow"`
 stops.index("Linlithgow")
-
 # 5. Remove `"Livingston"` from the array using its name
 stops.delete("Livingston")
 # 6. Delete `"Cumbernauld"` from the array by index
@@ -32,9 +31,9 @@ answer = stops.count
 reversed = stops.reverse
 
 # 10. Print out all the stops using a for loop
-for name_of_stops in stops
-p name_of_stops
-end
+# for name_of_stops in stops
+# p name_of_stops
+# end
 
 ## Exercise B
 
@@ -110,9 +109,14 @@ users["Avril"][:pets][0][:species]
 users["Erik"][:lottery_numbers].min
 
 # 6. Return an array of Avril's lottery numbers that are even
-def even_numbers(num)
-users["Avril"][:lottery_numbers]
+avrils_evens = []
+for number in users["Avril"][:lottery_numbers]
+ if number % 2 == 0
+   avrils_evens.push(number)
+ end
 end
+
+p avrils_evens
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"][:lottery_numbers] << 7
 # 8. Change Erik's hometown to Edinburgh
