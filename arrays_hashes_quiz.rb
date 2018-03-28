@@ -14,7 +14,7 @@ stops.push("Edinburgh Waverley")
 stops.unshift("Glasgow Queen St")
 
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
-stops[4] = "Polmont"
+stops.insert(4, "Polmont")
 
 # 4. Work out the index position of `"Linlithgow"`
 stops.index("Linlithgow")
@@ -27,13 +27,17 @@ answer = stops.count
 
 # 8. How many ways can we return `"Falkirk High"` from the array?
 
+stops[2]
+stops.fetch(2)
+stops.fetch(-5)
+stops[-5]
 # 9. Reverse the positions of the stops in the array
 reversed = stops.reverse
 
 # 10. Print out all the stops using a for loop
-# for name_of_stops in stops
-# p name_of_stops
-# end
+for name_of_stops in stops
+p name_of_stops
+end
 
 ## Exercise B
 
@@ -109,16 +113,16 @@ users["Avril"][:pets][0][:species]
 users["Erik"][:lottery_numbers].min
 
 # 6. Return an array of Avril's lottery numbers that are even
-# avrils_evens = []
-# for number in users["Avril"][:lottery_numbers]
-#  if number % 2 == 0
-#    avrils_evens.push(number)
-#  end
-# end
+avrils_evens = []
+for number in users["Avril"][:lottery_numbers]
+ if number % 2 == 0
+   avrils_evens.push(number)
+ end
+end
 
 # p avrils_evens
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
-users["Erik"][:lottery_numbers] << 7
+users["Erik"][:lottery_numbers].push(7)
 # 8. Change Erik's hometown to Edinburgh
 users["Erik"][:home_town] = "Edinburgh"
 # 9. Add a pet dog to Erik called "Fluffy"
@@ -166,9 +170,9 @@ united_kingdom[1][:capital] = "Cardiff"
 united_kingdom.push({name: "Northern Ireland", population:  1811000, capital: "Belfast"})
 
 # # 3. Use a loop to print the names of all the countries in the UK.
-#   for countries in united_kingdom
-#     p countries[:name]
-#   end
+  for countries in united_kingdom
+    p countries[:name]
+  end
 # 4. Use a loop to find the total population of the UK.
     total_pop = 0
     for countries in united_kingdom
