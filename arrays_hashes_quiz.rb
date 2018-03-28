@@ -109,21 +109,30 @@ users["Avril"][:pets][0][:species]
 users["Erik"][:lottery_numbers].min
 
 # 6. Return an array of Avril's lottery numbers that are even
-avrils_evens = []
-for number in users["Avril"][:lottery_numbers]
- if number % 2 == 0
-   avrils_evens.push(number)
- end
-end
+# avrils_evens = []
+# for number in users["Avril"][:lottery_numbers]
+#  if number % 2 == 0
+#    avrils_evens.push(number)
+#  end
+# end
 
-p avrils_evens
+# p avrils_evens
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"][:lottery_numbers] << 7
 # 8. Change Erik's hometown to Edinburgh
 users["Erik"][:home_town] = "Edinburgh"
 # 9. Add a pet dog to Erik called "Fluffy"
-users["Erik"][:pets]
+new_pet = {:name => "Fluffy", :species => "dog"}
+users["Erik"][:pets].push(new_pet)
+p users["Erik"][:pets]
+
 # 10. Add another person to the users hash
+users["Sarah"] = {:twitter => "cherrylipqueen",
+ :lottery_numbers => [1, 28, 34, 19, 5, 11],
+ :home_town => "Glasgow",
+ :pets => [{:name => "Rags", :species => "dog"},
+      {:name => "Keith", :species => "cat"}]
+  }
 
 
 ## Exercise C
